@@ -1,0 +1,19 @@
+.kuu {
+    display: inline-block;
+    float: left;
+}
+
+.aasta {
+    display: inline-block;
+    float: right;
+}
+
+.wrapper {
+    max-width: 15%;
+    margin: auto;
+}
+
+#arv {
+    margin-top: 30px;
+
+}

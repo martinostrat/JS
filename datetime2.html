@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Esimene kuupaev
+<input id="esimene" type="date">
+<br>
+<br>
+<br>
+Teine kuupaev
+<input id="teine" type="date">
+<br><br><br><br>
+<button id="vahe" onclick="vahe(document.getElementById('esimene').value,document.getElementById('teine').value)">Leia paevade arv</button>
+
+
+<script>
+    function vahe() {
+
+        var esimene = document.getElementById('esimene').value;
+        var teine = document.getElementById('teine').value;
+
+        var date1 = new Date(esimene);
+        var date2 = new Date(teine);
+
+
+        var paev = 24*60*60*1000;
+        var esimene_ms = date1.getTime();
+        var teine_ms = date2.getTime();
+
+        var vahe_ms = Math.abs(esimene_ms - teine_ms);
+
+        pvahe = Math.round(vahe_ms/paev);
+        alert(pvahe);
+    }
+</script>
+</body>
+</html>
